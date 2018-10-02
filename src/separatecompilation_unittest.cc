@@ -89,14 +89,14 @@ namespace {
 
     TEST_F(MovieReviewsTest, F) {
         std::string &&file = f();
-        std::regex f(".*[/\\\\]f\\.cc$");
+        std::regex f(".*(/|\\\\)f\\.cc");
         ASSERT_TRUE(std::regex_match(file, f));
         _testScore += 10;
     }
 
     TEST_F(MovieReviewsTest, G) {
         std::string &&file = g();
-        std::regex g(".*[/\\\\]g\\.cc$");
+        std::regex g(".*(/|\\\\)g\\.cc");
         ASSERT_TRUE(std::regex_match(file, g));
         _testScore += 10;
     }
